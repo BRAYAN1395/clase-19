@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script>
+        function acceso(){
+            let xu = document.getElementById('txtUsu').value;
+            let xc = document.getElementById('txtCon').value;
+            if (xu == 'Certus'){
+                if (xc =='123'){
+                    location.href="registro.html";
+                }else{
+                    alert('Contraseña equivocada');
+                }
+            }else{
+                alert('Usuario incorrecto');
+            }
+
+        }
+    </Script>
+    <style>
+        input[type=button]{
+            background-color: brown;color: white;
+            width: 150px; height: 50px;
+            border-radius: 10px;
+        }
+        input[type=text]{
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+        input[type=password]{
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align:center ;">TUTORIAL DE HARDWARE</h1>
+<div style="margin:auto; width: 50%;">
+    <div style="width: 50%; float:left">
+        <img width="100%" src="https://firebasestorage.googleapis.com/v0/b/zapatillas-65318.appspot.com/o/contactUs.jpg?alt=media&token=00ed23be-6aec-488e-a488-6394bedc9e03" alt="">
+    </div>
+
+<div style="width: 50%;float:right">
+    
+    <table style="margin:auto; margin-top: 130px;">
+        <tr>
+            <td>Usuario</td>
+            <td>
+                <input type="text" name="" id="txtUsu">
+            </td>
+        </tr>
+        <tr>
+            <td>Contraseña</td>
+            <td>
+                <input type="password" name="" id="txtCon">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="acceso();" value="Acceso">
+            </td>
+            <td>
+                <input type="button" onclick="salir();" value="Salir">
+
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+    
+</body>
+</html>

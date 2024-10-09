@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        table{
+            width: 30%; margin: auto;
+        }
+        input[type=text]{
+            padding: 10px;
+            width: 30px;
+        }
+        input[type=button]{
+            background-color: brown;color: white;
+            width: 150px; height: 50px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function nuevo(){
+            document.getElementById('txtP1').value="";
+            document.getElementById('txtP2').value="";
+            document.getElementById('txtP3').value="";
+            document.getElementById('txtProm').value="";
+            document.getElementById('txtP1').focus();
+
+        }
+        function calcular(){
+            let p1 = document.getElementById('txtP1').value;
+            let p2 = document.getElementById('txtP2').value;
+            let p3 = document.getElementById('txtP3').value;
+            let pro = (parseFloat(p1) + parseFloat(p2) + parseFloat(p3))/3
+            document.getElementById('txtProm').value=pro.toFixed(1);
+
+        }
+    </script>
+</head>
+<body>
+    <div style="width: 70%; margin:auto;">
+        <img width="100%" src="https://firebasestorage.googleapis.com/v0/b/zapatillas-65318.appspot.com/o/banner.jpg?alt=media&token=5fcca47b-397f-4b80-b7e9-d0f501c001a3" alt="">
+    </div>
+    <h1>REGISTRO DE NOTAS</h1>
+    <table>
+        <tr>
+            <td>Practica 1</td>
+            <td>
+                <input type="text" name="" id="txtP1">
+            </td>
+        </tr>
+        <tr>
+            <td>Practica 2</td>
+            <td>
+                <input type="text" name="" id="txtP2">
+            </td>
+        </tr> 
+        <tr>
+            <td>Practica 3</td>
+            <td>
+                <input type="text" name="" id="txtP3">
+            </td>
+        </tr>
+        <tr>
+            <td>Promedio</td>
+            <td>
+                <input type="text" name="" id="txtProm" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="calcular();" value="Calcular">
+            </td>
+            <td>
+                <input type="button" onclick="nuevo();" value="Nuevo">
+
+            </td>
+    </table>
+</body>
+</html>
